@@ -69,6 +69,26 @@ void righAlignNumbers(int n) {
 }
 
 /*================
+         *
+       * * *
+     * * * * *
+   * * * * * * *
+ * * * * * * * * *   
+=================== */
+
+void starTriangle(int n) {
+    for(int i = 1; i <= n; i++) {
+        for(int lbs = 1; lbs <= n-i; lbs++) {
+            cout << "  ";
+        }
+        for(int j=1; j <= i+(i-1); j++) {
+            cout <<" *";
+        }
+        cout << endl;
+    }
+}
+
+/*================
          1
        1 2 1
      1 2 3 2 1
@@ -76,15 +96,27 @@ void righAlignNumbers(int n) {
  1 2 3 4 5 4 3 2 1   
 =================== */
 
-void numTriangle() {
-
+void numTriangle(int n) {
+ for(int i = 1; i <= n; i++) {
+        for(int lbs = 1; lbs <= n-i; lbs++) {
+            cout << "  ";
+        }
+        for(int j=1; j <= i+(i-1); j++) {
+            if(j<=i) {
+                cout <<" " <<j;
+            } else {
+                cout << " " << j - ((j-i) *2);
+            }
+            
+        }
+        cout << endl;
+    }
 }
 int  main() {
-   
-    // starPattern(7);
-    // numPattern(7);
-    // revNumPattern(7);
-   righAlignNumbers(7);
+    starPattern(7);
+    numPattern(7);
+    revNumPattern(7);
+    righAlignNumbers(7);
+    starTriangle(7);
+    numTriangle(7);
 }
-
-
