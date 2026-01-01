@@ -33,6 +33,7 @@ public:
 
     /* 
         better approach but using maps takes lot of space
+        use two pointers if the space contraint is mentioned in question.
     */
     vector<int> twoSumIndicesUsingMap(vector<int>& nums, int target) {
         vector<int> res;
