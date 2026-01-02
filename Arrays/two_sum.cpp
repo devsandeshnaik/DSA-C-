@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// https://leetcode.com/problems/two-sum/description/
 class Solution {
 public:
     vector<int> twoSumBrute(vector<int>& nums, int target) {
@@ -55,6 +56,7 @@ public:
         - can be used for values to given array is sorted
     */
 
+    // https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
     vector<int> twoSumIndicesUsing2Pointer(vector<int>& nums, int target) {
         int pointer1 = 0;
         int pointer2 = nums.size() - 1;
