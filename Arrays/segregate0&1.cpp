@@ -66,6 +66,18 @@ class Solution {
         arr[index1] = arr[index2];
         arr[index2] = temp;
     }
+
+
+    // Another approach found on net
+    void segregate0and1UsingTwoLoops(vector<int> &arr) {
+        int count0 = 0;
+        for (int x : arr) {
+            if (x == 0) count0++;
+        }
+        for (int i = 0; i < arr.size(); i++) {
+        arr[i] = (i < count0) ? 0 : 1;
+        }
+    }
 };
 
 int main() {
