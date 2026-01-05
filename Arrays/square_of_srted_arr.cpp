@@ -124,7 +124,7 @@ public:
         while (nums[pIndex] < 0) pIndex++;
         int nIndex = pIndex - 1;
 
-        // merge
+        // merge  
         while (pIndex < n && nIndex >= 0) {
             int posSq = nums[pIndex] * nums[pIndex];
             int negSq = nums[nIndex] * nums[nIndex];

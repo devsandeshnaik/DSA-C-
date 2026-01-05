@@ -23,7 +23,7 @@ class Solution {
         }
     }
 
-    // Using two pointers both starting from 0th index
+    // Using two pointers both starting from 0 & 1 index respectively.
     void segregate0and1Pointer(vector<int> &arr) {
         int pointer1Index = 0;
         int pointer2Index = 1;
