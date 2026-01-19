@@ -47,20 +47,16 @@ public:
             while(left < right) {
                 int iVal = -1 * nums[i];
                 int sum = nums[left] + nums[right];
-                cout << "iVal " << iVal << "==" << "Sum " << sum << endl;
                 if(iVal == sum) {
                     result.push_back( { nums[i], nums[left], nums[right]});
                     right--;
                     left++;
                     while(nums[left] == nums[left-1] && left < right) left++;
                     while(nums[right] == nums[right+1] && left < right) right--;
-                    cout << "left: " << left << " right: " << right << " i: " << i <<endl;
                 } else if (iVal > sum) {
                     left++;
-                    while(nums[left] == nums[left-1] && left < right) left++;
                 } else {
                     right--;
-                    while(nums[right] == nums[right+1] && left > right) right--;
                 }
             }
         }
