@@ -24,6 +24,12 @@ class Solution {
     }
 
     // Using two pointers both starting from 0 & 1 index respectively.
+    /*
+        - first while loop ensure second pointer have not reached the end of arr
+        - first pointer moved until it finds first 1 & pointer2 is < pointer1 
+        - next pointer 2 moves ahead to find next 0
+        - if found it before reaching end of arr then swap the two
+    */
     void segregate0and1Pointer(vector<int> &arr) {
         int pointer1Index = 0;
         int pointer2Index = 1;
@@ -69,6 +75,8 @@ class Solution {
 
 
     // Another approach found on net
+    // calculates the counts of 0 first
+    // then in for loop set fist n counts to 0 and remaining to 1
     void segregate0and1UsingTwoLoops(vector<int> &arr) {
         int count0 = 0;
         for (int x : arr) {
