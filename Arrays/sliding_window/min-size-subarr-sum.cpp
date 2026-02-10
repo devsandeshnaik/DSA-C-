@@ -16,8 +16,6 @@ public:
             sum += nums[high];
             while(sum >= target) {
                 int newLenght =  (high-low) + 1;
-                cout << "Sum : " << sum << endl;
-                cout << "Lenghtx : " << newLenght << endl;
                 res = min(res, newLenght);
                 sum = sum - nums[low];
                 low++;
