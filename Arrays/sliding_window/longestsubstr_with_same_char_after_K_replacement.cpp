@@ -31,9 +31,7 @@ public:
         map<char, int> dict;
 
         for(high = 0; high < s.length(); high++) {
-            if(dict.find(s[high]) == dict.end()) {
-                dict[s[high]] = 1;
-            } else { dict[s[high]]++; }
+            dict[s[high]]++;
 
             int length = (high-low)+1;
             int charWithMaxFreq = maxFreq(dict);
@@ -62,7 +60,11 @@ public:
         }
         return max;
     }
+
+    //Approach 2 where we do not have to keep calculating frequency again and again.
 };
+
+
 
 int main() {
     Solution sol;

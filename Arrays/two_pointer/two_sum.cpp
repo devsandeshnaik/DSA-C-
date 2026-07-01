@@ -51,11 +51,11 @@ public:
     }
 
     /*
-        - works only when the array is sorted
-        - for unsorted array using maps is best option
+        - works onis sorted
+        - for unsorted array using maps is bly when the array est option
         - can be used for values to given array is sorted
     */
-
+ 
     // https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
     vector<int> twoSumIndicesUsing2Pointer(vector<int>& nums, int target) {
         int pointer1 = 0;

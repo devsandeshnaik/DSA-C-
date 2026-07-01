@@ -6,29 +6,25 @@ using namespace std;
 class Solution {
   public:
     int longestKSubstr(string &s, int k) {
-        map<char,int> dict;
-        int low = 0;
+        map<char, int> dict;
+        int start = 0;
         int result = 0;
 
-        for(int high = 0; high < s.size(); high++) {
-            char c = s[high];
-            if(dict.find(c) == dict.end()) {
-                dict.insert({c, 1});
+        for(int end = 0; end < s.size()-1; end++) {
+            if(dict.find(s[end]) != dict.end()) {
+                dict[end] = dict[end] + 1;
             } else {
-                dict[c] = dict[c] + 1;
+                dict[end] = 1;
             }
-            
+
             while(dict.size() > k) {
-                
-                dict[s[low]] = dict[s[low]] - 1;
-                if(dict[s[low]] == 0) dict.erase(s[low]);
-                low++;
-            }
-            if(dict.size() == k) {
-                result = max(result, (high-low)+1);
+                if(dict[start] > 1) {
+                    dict[start]--;
+                } else {
+                    dict[start].
+                }
             }
         }
-        return (result == 0) ? -1 : result;
     }
 };
 
