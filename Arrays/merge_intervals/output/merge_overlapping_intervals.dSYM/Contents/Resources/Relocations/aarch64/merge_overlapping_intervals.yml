@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sandeshnaik/Documents/DSA-C++/Arrays/merge_intervals/output/merge_overlapping_intervals'
+relocations:     []
+...
