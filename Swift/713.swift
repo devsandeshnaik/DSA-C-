@@ -9,7 +9,7 @@
         if product < k { count += end-start + 1 }
         while(product >= k) {
             product = product/nums[start]
-            start++;
+            start += 1;
             if product < k { count += end-start + 1 }
         }
     }
